@@ -1,0 +1,51 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  outline: 1px solid teal;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.label {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label input {
+  width: 100%;
+  padding: 5px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  max-width: 100px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 200px 2fr
+}
+
+.todosList {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 10px;
+
+}
+
+.todosItems {
+  outline: 1px solid teal;
+  padding: 10px;
+  border-radius: 5px;
+  width: 400px;
+  align-items: center;
+  justify-content: space-around;
+}

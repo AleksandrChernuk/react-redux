@@ -32,7 +32,15 @@ export const LoginForm = () => {
     <form className={s.form} onSubmit={handleSubmit}>
       <label className={s.label}>
         Email
-        <input type="email" name="email" value={email} required onChange={handleChange} />
+        <input
+          type="email"
+          name="email"
+          value={email}
+          required
+          onChange={handleChange}
+          placeholder="____@email.com
+        "
+        />
       </label>
       <label className={s.label}>
         Password

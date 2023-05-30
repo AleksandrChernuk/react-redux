@@ -2,6 +2,8 @@ import { useState } from "react";
 import s from "./Todos.module.css";
 import { useDispatch } from "react-redux";
 import { addTodos } from "../../redux/todos/todos-operation";
+import { TextField } from "@mui/material";
+import { Button, Box } from "@mui/material";
 
 export const TodosForm = ({ onSave }) => {
   const dispatch = useDispatch();
@@ -34,17 +36,30 @@ export const TodosForm = ({ onSave }) => {
 
   return (
     <div>
-      <h3> Дотавить контакт</h3>
-      <form className={s.form} onSubmit={handleSubmit}>
-        <label className={s.label}>
-          Введите имя
-          <input type="text" name="name" value={name} onChange={handleChange} />
-        </label>
-        <label className={s.label}>
-          Введите номер
-          <input type="tel" name="tel" value={number} onChange={handleChange} />
-        </label>
-        <button className={s.button}>Add</button>
+      <h3 style={{ margin: "0" }}> Дотавить контакт</h3>
+      <form></form>
+      <form onSubmit={handleSubmit} className={s.form}>
+        <TextField
+          label="Введите имя"
+          variant="standard"
+          type="text"
+          name="name"
+          value={name}
+          onChange={handleChange}
+        />
+
+        <TextField
+          variant="standard"
+          label="Введите номер"
+          type="tel"
+          name="tel"
+          value={number}
+          onChange={handleChange}
+        />
+
+        <Button variant="contained" color="success" type="submit">
+          Add
+        </Button>
       </form>
     </div>
   );

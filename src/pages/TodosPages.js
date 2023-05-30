@@ -6,6 +6,8 @@ import { TodosList } from "../component/Todos/TodosList";
 import ModalWindow from "../component/Modal/ModalWindow";
 import s from "./TodosPagas.module.css";
 import { Stats } from "../component/Todos/Stats";
+import { Button } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 
 const TodosPages = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,9 +17,10 @@ const TodosPages = () => {
     <div>
       <div className={s.wrapper}>
         <TodosFilter />
-        <button type="button" onClick={toggleModal} style={{ padding: "10px", borderRadius: "10px" }}>
-          +
-        </button>
+        <Button variant="contained" color="success" size="large" onClick={toggleModal}>
+          Add
+        </Button>
+
         <Stats />
       </div>
 

@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
   gap: 10px;
 }

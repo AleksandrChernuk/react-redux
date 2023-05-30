@@ -2,6 +2,8 @@ import { useState } from "react";
 import s from "./LoginPage.module.css";
 import { useDispatch } from "react-redux";
 import { regist } from "../redux/auth/authOperation";
+import Button from "@mui/material/Button";
+import { TextField } from "@mui/material";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -38,19 +40,15 @@ const LoginPage = () => {
     <div>
       <h1>Страница регистрации пользователя</h1>
       <form className={s.form} onSubmit={handleSubmit}>
-        <label className={s.label}>
-          Name
-          <input type="text" name="name" value={name} onChange={onHandleChange} />
-        </label>
-        <label className={s.label}>
-          Email
-          <input type="email" name="email" value={email} onChange={onHandleChange} required />
-        </label>
-        <label className={s.label}>
-          Password
-          <input type="text" name="password" value={password} onChange={onHandleChange} required />
-        </label>
-        <button className={s.button}>Submit</button>
+        <TextField label="Name" name="name" value={name} onChange={onHandleChange} type="text" />
+
+        <TextField label="Email" type="email" name="email" value={email} onChange={onHandleChange} required />
+
+        <TextField label="Password" type="text" name="password" value={password} onChange={onHandleChange} required />
+
+        <Button variant="contained" color="success" type="button">
+          Submit
+        </Button>
       </form>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { toogleFilter } from "../../redux/todos/todos-actions";
+import { TextField } from "@mui/material";
 
 export const TodosFilter = () => {
   const dispatch = useDispatch();
@@ -11,10 +12,7 @@ export const TodosFilter = () => {
 
   return (
     <div>
-      <h3 style={{ margin: "0", padding: "0" }}>Фильтр Контактов</h3>
-      <label>
-        <input type="text" style={{ padding: "10px" }} onChange={onHandleChange} />
-      </label>
+      <TextField size="small" label="Фильтр Контактов" type="text" onChange={onHandleChange} />
     </div>
   );
 };

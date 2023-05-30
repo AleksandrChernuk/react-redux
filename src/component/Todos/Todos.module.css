@@ -3,9 +3,8 @@
   flex-direction: column;
   gap: 20px;
   width: 300px;
-  outline: 1px solid teal;
-  padding: 40px;
-  border-radius: 10px;
+
+  padding: 20px;
 }
 
 .label {
@@ -48,4 +47,19 @@
   width: 400px;
   align-items: center;
   justify-content: space-around;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: teal;
+}
+
+.title span {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  color: gray;
+
 }
